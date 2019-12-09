@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_prev"
+        android:icon="@drawable/ic_chevron_left_white_24dp"
+        android:title="Anterior"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_next"
+        android:icon="@drawable/ic_chevron_right_white_24dp"
+        android:title="Siguiente"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_update"
+        android:title="Actualizar"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_signout"
+        android:title="Cerrar Sesión"
+        app:showAsAction="never"/>
+
+</menu>

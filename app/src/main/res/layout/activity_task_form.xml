@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Crear Tarea"
+            app:titleTextColor="#FFFFFF"
+            android:background="@color/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_panel">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="300dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/textNotSelected"
+                android:hint="Título"
+                app:hintTextAppearance="@style/AppTheme.FloatingLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/text"
+                    android:theme="@style/EditText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:textColorHint="@color/textNotSelected"
+                app:hintTextAppearance="@style/AppTheme.FloatingLabel">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/text"
+                    android:theme="@style/EditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="300dp"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:fontFamily="@font/open_sans"
+            android:text="Crear Tarea"
+            android:textAllCaps="false"
+            android:textColor="#FCFCFC"
+            android:textSize="25dp" />
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/open_sans"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="#F4E04D"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>
